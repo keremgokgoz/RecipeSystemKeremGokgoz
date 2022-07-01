@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "UserDashBoard";
+}
+
+@using (Html.BeginForm("Logout", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend> User DashBoard </legend>
+
+        @if (Session["Name"] != null)
+        {
+            <text>
+                Welcome @Session["Name"].ToString() </text>
+        }
+
+        <br />
+        <a href="Index" onclick="document.forms[0].submit();">Logout</a>
+
+
+    </fieldset>
+
+}
+
+
